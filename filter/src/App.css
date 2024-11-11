@@ -6,12 +6,12 @@
   grid-template-columns: repeat(4, 1fr);
   overflow: hidden;
   margin-top: 50px;
+  gap: 20px;
 }
 .container img {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  padding: 10px;
 }
 .container img:nth-of-type(2n) {
   margin-top: -80px;
