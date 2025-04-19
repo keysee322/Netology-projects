@@ -1,0 +1,106 @@
+body {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  color: #21201f;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: flex-end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  padding: 8px;
+  border: 2px solid #21201f;
+  height: 45px;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  padding: 8px 15px;
+
+  border: none;
+  height: 45px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #21201f;
+}
+
+.workout-form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(https://mywildalberta.ca/images/GFX-MWA-Parks-Reservations.png)
+    no-repeat;
+  width: 20px;
+  height: 20px;
+  border-width: thin;
+}
+
+button[type="submit"]:hover {
+}
+
+.workouts-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.workouts-table th,
+.workouts-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.workouts-table th {
+  font-weight: bold;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.delete-btn:hover {
+}
