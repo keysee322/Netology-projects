@@ -1,0 +1,170 @@
+.App {
+  text-align: center;
+}
+*,
+input {
+  padding: 0;
+  margin: 0;
+}
+.clock-container {
+  width: 100%;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.clock-item {
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+}
+.clock-item h3 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+.clock-dial {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url(dial.svg);
+  background-size: cover;
+  background-position: center;
+}
+.clock-hours {
+  position: absolute;
+  height: 25%;
+  width: 6px;
+  border-radius: 6px;
+  background-color: #282c34;
+  transform: translate(0, -50%);
+  transform-origin: 50% 100%;
+}
+.clock-min {
+  position: absolute;
+  height: 50%;
+  width: 4px;
+  border-radius: 4px;
+  background-color: #282c34;
+  transform: translate(0, -50%);
+  transform-origin: 50% 100%;
+}
+.clock-sec {
+  position: absolute;
+  height: 50%;
+  width: 2px;
+  border-radius: 2px;
+  background-color: #d21502;
+  transform: translate(0, -50%);
+  transform-origin: 90% 100%;
+}
+
+.clock-center {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #282c34;
+}
+#root {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+.clock-widget {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+label {
+  margin-right: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+input {
+  box-sizing: border-box;
+  height: 30px;
+  border: 2px solid #282c34;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 20px;
+  padding: 0 10px;
+}
+button {
+  cursor: pointer;
+}
+form button {
+  box-sizing: border-box;
+  height: 30px;
+  border: 2px solid #282c34;
+  background-color: #282c34;
+  color: #fff;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 20px;
+  padding: 0 10px;
+}
+
+.btn-close {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+}
+.btn-close:hover {
+  opacity: 0.7;
+}
+.btn-close img {
+  width: 100%;
+  height: 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,155 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #282c34;
+}
+
+.chat-content::-webkit-scrollbar {
+  width: 10px; /* Ширина вертикального скроллбара */
+  height: 10px; /* Высота горизонтального (если нужно) */
+}
+
+.chat-content::-webkit-scrollbar-track {
+  background: red; /* Цвет фона */
+  border-radius: 5px;
+}
+
+.chat-content::-webkit-scrollbar-thumb {
+  background: red; /* Цвет ползунка */
+  border-radius: 5px;
+  border: 2px solid #f1f1f1; /* Отступ вокруг ползунка */
+}
+
+.chat-content::-webkit-scrollbar-thumb:hover {
+  background: red; /* Цвет при наведении */
+}
+
+/* Для Firefox */
+.chat-content {
+  scrollbar-width: none; /* "auto" | "thin" | "none" */
+  scrollbar-color: #888 #f1f1f1; /* thumb track */
+}
+
+.chat-content {
+  position: fixed;
+  max-width: 1200px;
+  width: 90%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: baseline;
+  height: calc(100% - 200px);
+  overflow: auto;
+  padding-bottom: 40px;
+}
+
+.chat-message {
+  font-size: 18px;
+  width: fit-content;
+  background-color: azure;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  max-width: 80%;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.chat-message.owner {
+  margin-left: auto;
+  background-color: #fff;
+}
+
+*,
+input {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.chat {
+  max-width: 1200px;
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.chat-form {
+  width: 90%;
+  position: fixed;
+  height: 200px;
+  bottom: 0;
+  max-width: 1200px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+.chat-form textarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+  font-size: 18px;
+  padding: 30px;
+  padding-right: 80px;
+}
+
+.chat-form button {
+  position: absolute;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  padding-top: 20px;
+  padding-right: 20px;
+  background-color: transparent;
+  border: none;
+  right: 0;
+  top: 0;
+  transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+button:hover {
+  opacity: 0.7;
+}
+.chat-form button img {
+  width: 100%;
+  height: 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+textarea {
+  resize: none;
+  overflow: auto; /* убирает стандартный уголок */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
